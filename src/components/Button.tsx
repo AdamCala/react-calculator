@@ -4,7 +4,7 @@ interface Props {
 }
 
 const Button = ({ children, span }: Props) => {
-  const buttonClasses = "btn btn-outline-primary" + (span ? ` ${span}` : "");
+  const buttonClasses = "btn btn-outline-primary opacity-75" + (span ? ` ${span}` : "");
 
   return (
     <button type="button" className={buttonClasses}>

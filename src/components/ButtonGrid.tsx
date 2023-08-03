@@ -1,10 +1,12 @@
 import Button from "./Button";
+import Display from "./Display";
 import "./ButtonsGrid.css";
 
 const ButtonGrid = () => {
   return (
     <>
       <div className="buttons-grid">
+        <Display></Display>
         <Button span="span-two">AC</Button>
         <Button>DEL</Button>
         <Button>%</Button>
