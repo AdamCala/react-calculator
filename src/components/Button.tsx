@@ -1,13 +1,19 @@
 interface Props {
   children: string;
   span?: string;
+  onClick: (params: string) => void;
 }
 
-const Button = ({ children, span }: Props) => {
-  const buttonClasses = "btn btn-outline-primary opacity-75" + (span ? ` ${span}` : "");
+const Button = ({ children, span, onClick }: Props) => {
+  const buttonClasses =
+    "btn btn-outline-primary opacity-75" + (span ? ` ${span}` : "");
 
   return (
-    <button type="button" className={buttonClasses}>
+    <button
+      type="button"
+      className={buttonClasses}
+      onClick={() => onClick(children)}
+    >
       {children}
     </button>
   );
